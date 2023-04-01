@@ -1,4 +1,4 @@
-CodeDuet 2k23 Round 3
+// CodeDuet 2k23 Round 3
 
 #include<iostream>
 #include<fstream>
@@ -47,21 +47,21 @@ int main()
     string st;//Create a output string 
 
     
-    while(in.eof()){  //Iterate in file1. Copy data from file1 to file3
+    while(!in.eof()){  //Iterate in file1. Copy data from file1 to file3
         in>>st;
-        out<<st;
+        out<<st<<" ";
     }
-
+    in.close();
 
      in.open("file2.txt"); //Read input file2
-
-  while(in.eof()){ //Iterate in file2. Copy data from file2 to file3
+        out<<"\n";
+  while(!in.eof()){ //Iterate in file2. Copy data from file2 to file3
         in>>st;
-        out<<st;
+        out<<st<<" ";
     }
 
 
    
 
-
+   return 0;
 }
