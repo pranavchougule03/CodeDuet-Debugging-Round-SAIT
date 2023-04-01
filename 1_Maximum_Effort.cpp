@@ -1,3 +1,5 @@
+
+
 // CodeDuet 2k23 Round 3
 
 
@@ -9,11 +11,12 @@
  *
  */
 #include <iostream>
+using namespace std;
 
 int maxValue(int *arr, int size)
 {
     int *max = arr;
-    for (int i = 1; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
         if (*arr > *max)
         {
@@ -21,13 +24,13 @@ int maxValue(int *arr, int size)
         }
         arr++;
     }
-    return max;
+    return *max;
 }
 
 int main()
 {
     int arr[] = {10, 20, 5, 30, 15};
-    int size = sizeof(arr) / sizeof(arr);
+    int size = sizeof(arr) / sizeof(int);
 
     int max = maxValue(arr, size);
 
