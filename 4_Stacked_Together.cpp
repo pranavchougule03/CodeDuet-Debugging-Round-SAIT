@@ -32,7 +32,7 @@ void Stack ::display()
     }
     else
     {
-        Node *p;
+        Node *p = top;
 
         while (p)
         {
@@ -45,17 +45,15 @@ void Stack ::display()
 // Push values in the stack
 void Stack ::push()
 {
-    Node *p;
-    if (top)
-    {
+    Node *p  = new Node();
+
+  
         cout << "Enter data: ";
         cin >> p->data;
         p->next = top;
         top = p;
         display();
-    }
-    else
-        cout << "Stack Overflow\n";
+    
 }
 
 // Pop values in the stack
@@ -97,7 +95,7 @@ int main()
     while (1)
     {
         cout << "MENU: \n1.display\n2.push\n3.pop\n4.peek\n";
-        char choice;
+        int choice;
         cin >> choice;
         switch (choice)
         {
@@ -108,10 +106,10 @@ int main()
             s1.push();
             break;
         case 3:
-            s1.peek();
+            s1.pop();
             break;
         case 4:
-            s1.pop();
+            s1.peek();
             break;
         default:
             return 0;
